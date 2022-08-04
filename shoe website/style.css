@@ -1,0 +1,299 @@
+body{
+    margin-left: 1em;
+    padding: 0;
+    font-family: 'poppins';
+}
+.hero{
+    background-image: url(bg-red.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: 20%;
+    z-index: -1;
+    animation: interload 2s forwards;
+}
+@keyframes interload{
+    from{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    margin-top: 5em;
+    padding: 0;
+}
+ul a{
+    padding: .75em 2em;
+    display: block;
+    transition: .5s ease;
+    width: 100%;
+}
+ul a:hover{
+    background-color: rgb(199, 195, 195);
+}
+li a{
+    color: black;
+}
+nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    background-color: white;
+    width: 50%;
+    height: 100vh;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+}
+.open-nav{
+    transform: translateX(0%);
+}
+.logo{
+    color: white;
+    margin-top: 1em;
+    font-weight: bold;
+}
+.menu{
+    position: relative;
+    left: 14em;
+    margin-top: .4em;
+}
+.close{
+    margin-top: 1em;
+}
+.hero-text{
+    margin-top: 6em;
+    color: white;
+    animation: movedown 1s ease-in-out forwards;
+    opacity: 0;
+}
+@keyframes movedown{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.hero-text h1{
+    width: 8em;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
+.hero-text p{
+    width: 19em;
+}
+.down-arrow{
+    margin-left: -.9em;
+    margin-top: 8em;
+    animation: movearrow 1s alternate-reverse infinite;
+}
+@keyframes movearrow{
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+.info{
+    margin-top: 12em;
+}
+.text-brand{
+    font-weight: bold;
+}
+.text{
+    margin-top: -1em;
+}
+img{
+    background-image: url(image1.jpeg);
+    width: 100%;
+    height: 25em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 35%;
+}
+
+/* iphone 6plus above */
+
+@media (min-width: 390px){
+    .hero-text{
+        margin-top: 8em;
+    }
+    .hero{
+        background-position-x: 20%;
+        background-position-y: 30%;
+    }
+    .menu{
+        margin-left: 1em;
+    }
+    .down-arrow{
+        margin-top: 14em;
+    }
+}
+
+@media (min-width: 400px){
+    .down-arrow{
+        margin-top: 10em;
+    }
+    .menu{
+        margin-left: 2em;
+    }
+    .info{
+        margin-top: 15em;
+    }
+}
+@media (min-width: 414px){
+    .down-arrow{
+        margin-top: 10em;
+    }
+    .info{
+        margin-top: 14em;
+    }
+}
+@media (min-width: 760px){
+    .hero-text{
+        margin-top: 16em;
+    }
+    .hero-text h1{
+        width: 11em;
+    }
+    .menu{
+        margin-left: 24em;
+    }
+    .down-arrow{
+        margin-top: 17em;
+    }
+    .image1{
+        height: 35em;
+    }
+    .image2{
+        height: 45em;
+    }
+    .image3{
+        height: 45em;
+    }
+}
+@media (min-width: 920px){
+    span{
+        color: red;
+    }
+    .logo{
+        color: black;
+        margin-left: 3em;
+    }
+    .hero-text{
+        color: black;
+        height: auto;
+        margin-top: 5em;
+        margin-left: 3em;
+        width: 40%;
+        margin-bottom: 8em;
+    }
+    .hero{
+       left: unset;
+       right: 0;
+       width: 50%;
+       height: 42em; 
+    }
+    .menu{
+        display: none;
+    }
+    nav{
+        transform: translateX(0);
+        background-color: unset;
+        display: block;
+        position: unset;
+        width: auto;
+        height: auto;
+    }
+    nav a{
+        color: white;
+    }
+    .close{
+        display: none;
+    }
+    ul{
+        display: flex;
+        margin: 0;
+        margin-left: 35em;
+        margin-top: -1.5em;
+    }
+    ul a{
+        padding: .5em 1.5em;
+        font-size: .9rem;
+    }
+    ul a:hover{
+        background: none;
+        text-decoration: underline;
+    }
+    .hero-text h1{
+        font-size: 2.2rem;
+    }
+    .hero-text p{
+        font-size: 1.1rem;
+    }
+    svg.down-arrow{
+        stroke: black;
+        position: unset;
+        margin-top: -1.8em;
+        margin-left: 2em;
+    }
+    svg.down-arrow path{
+        fill: black;
+    }
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        margin-bottom: 8em;
+        gap: 3em;
+    }
+    img{
+        width: 35em;
+        height: 25em;
+        background-position-y: 30%;
+    }
+    .card-content{
+        text-align: right;
+        width: 25em;
+        margin-top: 5em;
+    }
+
+    .card.left{
+        grid-template-areas: "left right";
+    }
+    .card.left .image2{
+        grid-area: left;
+    }
+    .card.left .card-content{
+        text-align: left;
+        width: 25em;
+        justify-self: left;
+    }
+        
+}
+@media (min-width: 1200px){
+    .wrapper{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .card{
+        gap: 0;
+    }
+    nav{
+        margin-left: 8em;
+    }
+}
